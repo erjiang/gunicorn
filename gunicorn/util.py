@@ -255,6 +255,7 @@ def set_non_blocking(fd):
 
 
 def close(sock):
+    traceback.print_stack()
     try:
         # It's unsafe to close the socket immediately after writing data
         # without first calling shutdown().
