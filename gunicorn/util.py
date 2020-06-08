@@ -275,6 +275,7 @@ def set_non_blocking(fd):
 def close(sock):
     traceback.print_stack()
     try:
+        sock.recv(4096)
         sock.close()
     except socket.error:
         pass
